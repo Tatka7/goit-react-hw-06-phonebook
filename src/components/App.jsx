@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { selectContactsList } from 'redux/seleclors';
 
 import css from './App.module.css';
 
@@ -8,7 +9,8 @@ import ContactsList from './contacts/ContactsList';
 import Filter from './filter/Filter';
 
 export default function App() {
-  const contacts = useSelector(state => state.contacts.data);
+  // const contacts = useSelector(state => state.contacts.data);
+  const contacts = useSelector(selectContactsList);
 
   return (
     <div className={css.container}>
